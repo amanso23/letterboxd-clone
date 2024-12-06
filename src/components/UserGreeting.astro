@@ -1,0 +1,15 @@
+---
+
+import { loggedUser } from "@/data/loggedUser";
+
+const { 
+    username
+} = loggedUser;
+
+---
+
+<h1 class="text-xl font-light text-primary text-center">
+    Welcome back, 
+        <a href="#" aria-label="Seguir enlace hacia el perfil del usuario logeado" class="border-b border-slate-500 text-white transition-colors duration-300 hover:border-white">{username ? username : 'Guest'}</a>.
+    Here’s what your friends have been watching…
+</h1>

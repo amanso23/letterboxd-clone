@@ -1,22 +1,60 @@
+---
+import Footer from "@/sections/Footer.astro";
+import Header from "@/sections/Header.astro";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="https://letterboxd.com/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Letterboxd • Social film discovery.</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main class="max-w-3xl m-auto flex flex-col justify-center gap-y-4 py-12">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
 <style>
+	
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background-color: #1d2229;
+		font-family: 'Graphik', sans-serif;
+	
 	}
+
+	@font-face {
+		font-family: 'Graphik';
+		src: url('/fonts/Graphik-Light-Web.woff') format('woff');
+		font-weight: 300;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Graphik';
+		src: url('/fonts/Graphik-Regular-Web.woff') format('woff');
+		font-weight: 400;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Graphik';
+		src: url('/fonts/Graphik-Semibold-Web.woff') format('woff');
+		font-weight: 600;
+		font-display: swap;
+	}
+
+
+
+	
 </style>

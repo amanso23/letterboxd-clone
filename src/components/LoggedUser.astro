@@ -1,0 +1,22 @@
+---
+import ArrowDown from "@/icons/ArrowDown.svg";
+import { loggedUser } from "@/data/loggedUser";
+
+const {
+    username,
+    avatar
+} = loggedUser;
+
+---
+
+<div class="flex items-center gap-x-1 cursor-pointer px-1 py-1 rounded-sm transition-colors duration-200 hover:bg-[#8899aa]">
+    <img 
+        src={avatar} 
+        alt="user-avatar" 
+        class="rounded-full size-5"
+    >
+    <div class="flex items-center transition-colors duration-200 hover:text-white">
+        <p>{username}</p>
+        <ArrowDown width={15} height={15} />
+    </div>
+</div>

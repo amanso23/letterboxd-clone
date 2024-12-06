@@ -1,0 +1,15 @@
+---
+
+export interface Prop{
+    toolTipMessage: string;
+}
+
+const { toolTipMessage } = Astro.props;
+
+---
+
+<div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+    <div class="bg-tool-tip rounded py-[2px] px-2 relative">
+      <p class="text-primary font-semibold text-[9px] capitalize tracking-normal">{toolTipMessage}</p>
+    </div>
+</div>
