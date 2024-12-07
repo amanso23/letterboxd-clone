@@ -9,7 +9,7 @@ const anchorClass = "border-b border-slate-600 hover:border-slate-400 hover:text
 <footer class="bg-footer">
     <div class="max-w-3xl m-auto flex flex-col gap-y-2 pt-4 pb-8">
         <div class="flex justify-between items-center">
-            <ul class="flex gap-x-3 items-center ">
+            <ul class="flex gap-x-3 items-center">
                 {footerItems.map(({label, href}) => (
                     <li>
                         <a
@@ -25,13 +25,35 @@ const anchorClass = "border-b border-slate-600 hover:border-slate-400 hover:text
         </div>
     
         <p class="text-[9.5px] text-slate-500">© Letterboxd Limited. Made by 
-            <a href="#" class={anchorClass}>fans</a> 
+            <a 
+                aria-label="Seguir enlace hacia Letterboxd Crew"
+                href="https://letterboxd.com/crew/" 
+                class={anchorClass}
+                rel="noreferrer noopener"
+                target="_blank"
+            >
+                fans
+            </a> 
             in Aotearoa New Zealand. 
-            <a href="#" class={anchorClass}>Film data</a> 
+            <a 
+                aria-label="Seguir enlace hacia Film data"
+                href="https://letterboxd.com/about/film-data/" 
+                class={anchorClass} 
+                rel="noreferrer noopener" 
+                target="_blank"
+            >
+                Film data
+            </a> 
             from 
-            <a href="#" class={anchorClass}>TMDB</a>. 
-            <a href="#" class={anchorClass}>Mobile site</a>.
+            <a 
+                aria-label="Seguir enlace hacia TMDB"
+                href="https://www.themoviedb.org/" 
+                class={anchorClass}
+                rel="noreferrer noopener"
+                target="_blank"
+            >
+            TMDB
+            </a>. 
         </p>
-
     </div>
 </footer>
