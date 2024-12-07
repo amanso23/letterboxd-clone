@@ -1,0 +1,39 @@
+---
+
+interface Props {
+    title: string;
+    action?: string;
+}
+
+const { 
+    title,
+    action
+} = Astro.props;
+
+const hoverClass = "transition-colors duration-100 hover:text-[#40bcf4]";
+
+---
+
+<section>
+    <div class="flex justify-between border-b border-slate-400 uppercase">
+        <a 
+            aria-label="Seguir enlace hacia Popular on Letterboxd"
+            class={`text-[#99aabb] text-[11px] ${hoverClass}`}
+            href="#"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            {title}
+        </a>
+        <a 
+            aria-label={`Seguir enlace hacia ver más ${title}`}
+            class={`text-[#667788] text-[10px] ${hoverClass}`}
+            href="#"
+            rel="noreferrer noopener"
+            target="_blank"
+        >
+            {action}
+        </a>
+    </div>
+    <slot />
+</section>
