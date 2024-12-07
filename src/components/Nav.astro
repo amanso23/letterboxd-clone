@@ -1,8 +1,8 @@
 ---
 import LoggedUser from "./LoggedUser.astro";
 import Activity from "@/components/Activity.astro";
-import Search from "@/icons/Search.svg";
 import { navItems } from "@/data/navItems";
+import InputSearch from "@/ui/InputSearch.astro";
 
 ---
 
@@ -21,6 +21,7 @@ import { navItems } from "@/data/navItems";
                 </a>
             </li>
         ))}
-        <Search width={17} height={17} />
+        <InputSearch />
+        
     </ul>
 </nav>

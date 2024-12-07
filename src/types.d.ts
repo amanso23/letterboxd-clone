@@ -7,3 +7,5 @@ export interface LoggedUser {
     username: string;
     avatar: string;
 }
+
+export type FooterItem = NavItem;
